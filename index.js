@@ -55,12 +55,16 @@ function total() {
 }
 
 function removeFromCart(item) {
-  const originalCart = cart;
+  const firstCart = cart.length;
 
   for(i=0; i<=cart.length-1; i++){
   	if (cart[i].hasOwnProperty(item)){
-      cart[i].splice(i, 1)
+      cart.splice(i, 1)
     };
+  }
+
+  if (firstCart === cart.length){
+    return "That item is not in your cart."
   }
   return cart;
 }
