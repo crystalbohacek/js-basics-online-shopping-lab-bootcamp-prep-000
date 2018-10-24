@@ -21,8 +21,8 @@ function viewCart() {
   var itemArray = [];
   var priceArray = [];
 
-  for(i=0; i<=cart.length-1;i++){
-    for(key in cart[i]) {
+  for(let i=0; i<=cart.length-1;i++){
+    for(let key in cart[i]) {
       itemArray.push(key);
       priceArray.push(cart[i][key]);
     }
