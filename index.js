@@ -39,7 +39,7 @@ function viewCart() {
     for (var i=1; i<=cart.length-2; i++){
       str+= `, ${itemArray[i]} at $${priceArray[i]}`
     }
-    str+= `, and ${itemArray[itemArray.length-1]} at $${itemArray.length-1}.`
+    str+= `, and ${itemArray[itemArray.length-1]} at $${priceArray[priceArray.length-1]}.`
     return str;
   }
 }
