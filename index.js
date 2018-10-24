@@ -71,7 +71,7 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   var str = "";
-  if (arguments.length === 0 || arguments === undefined){
+  if (arguments.length === 0 || cardNumber === undefined || isNaN(cardNumber)){
     return "Sorry, we don't have a credit card on file for you."
   } else {
     str+= `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
