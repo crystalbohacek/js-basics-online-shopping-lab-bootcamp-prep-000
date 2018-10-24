@@ -55,11 +55,14 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var itemIndex = [];
+  const originalCart = cart;
 
   for(i=0; i<=cart.length-1; i++){
-  	itemIndex.push(cart[i].hasOwnProperty(item));
+  	if (cart[i].hasOwnProperty(item)){
+      cart[i].splice(i, 1)
+    };
   }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
