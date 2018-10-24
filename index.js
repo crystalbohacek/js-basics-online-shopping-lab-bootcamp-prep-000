@@ -57,7 +57,7 @@ function total() {
 function removeFromCart(item) {
   const firstCart = cart.length;
 
-  for(i=0; i<=cart.length; i++){
+  for(i=0; i<=cart.length-1; i++){
   	if (cart[i].hasOwnProperty(item)){
       cart.splice(i, 1)
     };
