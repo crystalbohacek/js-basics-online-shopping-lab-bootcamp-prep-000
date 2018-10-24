@@ -55,7 +55,11 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var itemIndex = [];
+
+  for(i=0; i<=cart.length-1; i++){
+  	itemIndex.push(cart[i].hasOwnProperty(item));
+  }
 }
 
 function placeOrder(cardNumber) {
